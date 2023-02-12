@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/api';
+import './details.css';
 
 const PokemonDetails = () => {
   const { pokemonId } = useParams();
@@ -16,7 +17,7 @@ const PokemonDetails = () => {
   }, [pokemonId]);
 
   return (
-    <div>
+    <div className='PokemonDetails'>
       {loading ? <p>Carregando...</p> : (
         <div>
           <h2 className='capitalize'>{pokemon.name}</h2>

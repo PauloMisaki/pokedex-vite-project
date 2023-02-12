@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Pokedex from './components/Pokedex';
 import PokemonDetails from './components/PokemonDetails';
+import './App.css';
 
 function App() {
   return (
