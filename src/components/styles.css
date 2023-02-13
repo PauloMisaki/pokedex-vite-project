@@ -226,13 +226,15 @@ body {
 }
 
 .PokemonDetails-page {
+  min-width: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  background-size: cover;
 }
 
 .PkDetails {
@@ -260,9 +262,8 @@ body {
 }
 
 .PkDetails-image {
-  width: 400px;
-  height: 400px;
-  margin-bottom: 10px;
+  width: 420px;
+  height: 420px;
 }
 
 .PkDetails-image img {
@@ -275,7 +276,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 110px;
-  margin-bottom: 10px;
 }
 
 .PkDetails-types p {
@@ -298,8 +298,8 @@ body {
 }
 
 .PkDetails-misc h2 {
-  margin-top: 4px;
-  margin-bottom: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .PkDetails-stats {
@@ -307,10 +307,19 @@ body {
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+  line-height: 12px;
 }
 
 .PkDetails-stats p {
   margin-left: 16px;
   font-size: 18px;
   width: 30%;
+}
+
+.ordered-info {
+  line-height: 8px;
+}
+
+.ordered-info-stat {
+  font-weight: 700;
 }

@@ -37,26 +37,26 @@ const PokemonDetails = () => {
           <div className='PkDetails-misc'>
             <h2 className='PkDetails-misc'>About</h2>
             <div className='misc-info'>
-              <div className='ordered-info'>
-                <p className='capitalize'>{pokemon.weight / 10} KG</p>
+              <div data-testid='pkd-weight' className='ordered-info'>
+                <p className='capitalize ordered-info-stat'>{pokemon.weight / 10} KG</p>
                 <p>Weight</p>
               </div>
-              <div className='ordered-info'>
-                <p className='capitalize'>{pokemon.abilities.map(a => a.ability.name).join(', ')}</p>
+              <div data-testid='pkd-abilities' className='ordered-info'>
+                <p className='capitalize ordered-info-stat'>{pokemon.abilities.map(a => a.ability.name).join(', ')}</p>
                 <p>Abilities</p>
               </div>
-              <div className='ordered-info'>
-                <p className='capitalize'>{pokemon.height / 10} M</p>
+              <div data-testid='pkd-height' className='ordered-info'>
+                <p className='capitalize ordered-info-stat'>{pokemon.height / 10} M</p>
                 <p>Height</p>
               </div>
             </div>
-            <div className='PkDetails-stats'>
-              <p className='stat'>HP: {pokemon.stats[0].base_stat}</p>
-              <p className='stat'>Attack: {pokemon.stats[1].base_stat}</p>
-              <p className='stat'>Defense: {pokemon.stats[2].base_stat}</p>
-              <p className='stat'>Sp. Attack: {pokemon.stats[3].base_stat}</p>
-              <p className='stat'>Sp. Defense: {pokemon.stats[4].base_stat}</p>
-              <p className='stat'>Speed: {pokemon.stats[5].base_stat}</p>
+            <div data-testid='pkd-stats' className='PkDetails-stats'>
+              <p className='stat'>HP: <span className='ordered-info-stat'>{pokemon.stats[0].base_stat}</span></p>
+              <p className='stat'>Attack: <span className='ordered-info-stat'>{pokemon.stats[1].base_stat}</span></p>
+              <p className='stat'>Defense: <span className='ordered-info-stat'>{pokemon.stats[2].base_stat}</span></p>
+              <p className='stat'>Sp. Attack: <span className='ordered-info-stat'>{pokemon.stats[3].base_stat}</span></p>
+              <p className='stat'>Sp. Defense: <span className='ordered-info-stat'>{pokemon.stats[4].base_stat}</span></p>
+              <p className='stat'>Speed: <span className='ordered-info-stat'>{pokemon.stats[5].base_stat}</span></p>
             </div>
           </div>
         </div>
