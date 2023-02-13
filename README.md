@@ -1,6 +1,8 @@
 # pokedex-vite-project
 Projeto de Pokédex utilizando vite para criação do boilerplate, adicionando versões mais atuais de diversas funcionalidades do React
 
+Veja o projeto diretamente no browser: https://pokedex-vite-project.vercel.app/
+
 Para rodá-lo em sua máquina basta:
 
 1 - Clonar este repositório.
