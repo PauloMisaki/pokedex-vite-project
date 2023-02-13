@@ -53,13 +53,14 @@ const Pokedex = () => {
       <div className='filter-div'>
         <form onSubmit={handleSearch} className='filter-form'>
           <input 
+            data-testid='query-input'
             className='search-input'
             type="text" 
             placeholder="Find by name or ID"
             value={query} 
             onChange={handleQuery} 
           />
-          <button type="submit" className='search-button'>I choose you!</button>
+          <button data-testid='search-button' type="submit" className='search-button'>I choose you!</button>
           {error && 
             <h3>{error}</h3>
           }
