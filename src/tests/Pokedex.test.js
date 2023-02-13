@@ -17,7 +17,6 @@ describe('Testes da tela principal: ', () => {
     userEvent.click(searchButton);
     // setTimeout usado para 'mockar' de forma simples a assincronissidade
     setTimeout(() => {
-      console.log('Checking Bulbasaur after 10 seconds')
       expect(screen.getByTestId('bulbasaur')).toBeInTheDocument();
     }, 10000);
   });
@@ -32,7 +31,6 @@ describe('Testes da tela principal: ', () => {
     )
     // setTimeout usado para 'mockar' de forma simples a assincronissidade
     setTimeout(() => {
-      console.log('Checking Treecko after 10 seconds')
       expect(screen.getByTestId('treecko')).toBeInTheDocument();
     }, 10000);
   })

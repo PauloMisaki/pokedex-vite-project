@@ -31,7 +31,6 @@ const Pokedex = () => {
   ]
 
   const handleGeneration = async (e) => {
-    console.log(e.target.value);
     await api.get(`/generation/${e.target.value}`)
       .then(res => {
         setPokemon(res.data.pokemon_species);
@@ -49,8 +48,7 @@ const Pokedex = () => {
     } else {
       setError('');
       try {
-        const response = await api.get(`/pokemon/${query.toLowerCase()}`);
-        console.log(response);
+        await api.get(`/pokemon/${query.toLowerCase()}`);
         navigateTo(`/pokemon/${query.toLowerCase()}`)
       } catch (error) {
         setError('Error "catching" the pokémon (check name or ID)');
@@ -88,7 +86,7 @@ const Pokedex = () => {
         </label>
       </div>
       <div>
-        {pokemon.map(p => (
+        {pokemon.sort((a, b) => a.url.split('/')[6] - b.url.split('/')[6]).map(p => (
           <Pokemon key={p.name} pokemon={p} />
         ))}
       </div>

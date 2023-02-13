@@ -22,7 +22,7 @@ const PokemonDetails = () => {
       <div className={`PokemonDetails-page bg-${pokemon.types[0].type.name}`}>
         <div className={`PkDetails gradient`}>
           <div className='PkDetails-header'>
-            <h2 className='capitalize'>{pokemon.name}{console.log(pokemon.types[0].type.name)}</h2>
+            <h2 className='capitalize'>{pokemon.name}</h2>
             <h2>#{pokemon.id}</h2>
           </div>
           <div className='PkDetails-image'>

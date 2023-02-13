@@ -11,7 +11,6 @@ describe('Testes da tela de detalhes: ', () => {
     userEvent.click(searchButton);
     // setTimeout usado para 'mockar' de forma simples a assincronissidade
     setTimeout(() => {
-      console.log('Checking Bulbasaur after 10 seconds')
       expect(screen.getByTestId('bulbasaur')).toBeInTheDocument();
       expect(screen.getByTestId('pkd-stats')).toBeInTheDocument();
       expect(screen.getByTestId('pkd-weight')).toBeInTheDocument();
