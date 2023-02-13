@@ -72,3 +72,7 @@ button:focus-visible {
 .capitalize {
   text-transform: capitalize;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}

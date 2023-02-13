@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/api';
+import './details.css';
 
 const PokemonDetails = () => {
   const { pokemonId } = useParams();
@@ -12,39 +13,56 @@ const PokemonDetails = () => {
       .then(res => {
         setPokemon(res.data);
         setLoading(false);
-      })
+      }) 
   }, [pokemonId]);
 
   return (
-    <div className='PokemonDetails-page'>
+    <>
       {loading ? <p>Loading...</p> : (
-        <div className='PkDetails'>
+      <div className={`PokemonDetails-page bg-${pokemon.types[0].type.name}`}>
+        <div className={`PkDetails gradient`}>
           <div className='PkDetails-header'>
-            <h2 className='capitalize'>{pokemon.name}{console.log(pokemon.stats[0])}</h2>
+            <h2 className='capitalize'>{pokemon.name}{console.log(pokemon.types[0].type.name)}</h2>
             <h2>#{pokemon.id}</h2>
           </div>
           <div className='PkDetails-image'>
             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt={pokemon.name} />
           </div>
           <div className='PkDetails-types'>
-            <p className='capitalize'>Types: {pokemon.types.map(t => t.type.name).join(' / ')}</p>
+            <h4 className={`type-${pokemon.types[0].type.name} uppercase`}>{pokemon.types[0].type.name}</h4>
+            {pokemon.types.length > 1 ? (
+            <h4 className={`type-${pokemon.types[1].type.name} uppercase`}>{pokemon.types[1].type.name}</h4>
+            ) : null}
           </div>
           <div className='PkDetails-misc'>
-            <p className='capitalize'>Abilities: {pokemon.abilities.map(a => a.ability.name).join(', ')}</p>
-            <p className='capitalize'>Weight: {pokemon.weight / 10} KG</p>
-            <p className='capitalize'>Heigth: {pokemon.height / 10} M</p>
+            <h2 className='PkDetails-misc'>About</h2>
+            <div className='misc-info'>
+              <div className='ordered-info'>
+                <p className='capitalize'>{pokemon.weight / 10} KG</p>
+                <p>Weight</p>
+              </div>
+              <div className='ordered-info'>
+                <p className='capitalize'>{pokemon.abilities.map(a => a.ability.name).join(', ')}</p>
+                <p>Abilities</p>
+              </div>
+              <div className='ordered-info'>
+                <p className='capitalize'>{pokemon.height / 10} M</p>
+                <p>Height</p>
+              </div>
+            </div>
             <div className='PkDetails-stats'>
-              <p>HP: {pokemon.stats[0].base_stat}</p>
-              <p>Attack: {pokemon.stats[1].base_stat}</p>
-              <p>Defense: {pokemon.stats[2].base_stat}</p>
-              <p>Special Attack: {pokemon.stats[3].base_stat}</p>
-              <p>Special Defense: {pokemon.stats[4].base_stat}</p>
-              <p>Speed: {pokemon.stats[5].base_stat}</p>
+              <p className='stat'>HP: {pokemon.stats[0].base_stat}</p>
+              <p className='stat'>Attack: {pokemon.stats[1].base_stat}</p>
+              <p className='stat'>Defense: {pokemon.stats[2].base_stat}</p>
+              <p className='stat'>Sp. Attack: {pokemon.stats[3].base_stat}</p>
+              <p className='stat'>Sp. Defense: {pokemon.stats[4].base_stat}</p>
+              <p className='stat'>Speed: {pokemon.stats[5].base_stat}</p>
             </div>
           </div>
         </div>
-      )}
     </div>
+      )}
+    </>
   );
 };
 

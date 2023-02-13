@@ -18,6 +18,18 @@ const Pokedex = () => {
       })
   }, []);
 
+  const generations = [
+    { name: 'Kanto', value: 1 },
+    { name: 'Johto', value: 2 },
+    { name: 'Hoenn', value: 3 },
+    { name: 'Sinnoh', value: 4 },
+    { name: 'Unova', value: 5 },
+    { name: 'Kalos', value: 6 },
+    { name: 'Alola', value: 7 },
+    { name: 'Galar', value: 8 },
+    { name: 'Paldea', value: 9 },
+  ]
+
   const handleGeneration = async (e) => {
     console.log(e.target.value);
     await api.get(`/generation/${e.target.value}`)
@@ -41,7 +53,7 @@ const Pokedex = () => {
         console.log(response);
         navigateTo(`/pokemon/${query.toLowerCase()}`)
       } catch (error) {
-        setError('Error catching the pokémon (check name or ID)');
+        setError('Error "catching" the pokémon (check name or ID)');
       }
     }
   }
@@ -67,16 +79,10 @@ const Pokedex = () => {
         </form>
         <label htmlFor="gen" className='select'>Regions
           <div className='select'>
-            <select className='gen-select' name="generation" id="gen" onChange={handleGeneration}>
-              <option value="1">Kanto</option>
-              <option value="2">Johto</option>
-              <option value="3">Hoenn</option>
-              <option value="4">Sinnoh</option>
-              <option value="5">Unova</option>
-              <option value="6">Kalos</option>
-              <option value="7">Alola</option>
-              <option value="8">Galar</option>
-              <option value="9">Paldea</option>
+            <select data-testid='region-select' className='gen-select' name="generation" id="gen" onChange={handleGeneration}>
+              {generations.map(generation => (
+                <option data-testid={generation.name} key={generation.name} value={generation.value}>{generation.name}</option>
+              ))}
             </select>
           </div>
         </label>

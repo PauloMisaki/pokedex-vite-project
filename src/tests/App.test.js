@@ -8,10 +8,30 @@ test('Verifica se o input de busca de pokémons está presente na tela', () => {
   expect(queryInput).toBeInTheDocument();
 });
 
-test('Tenta buscar pelo "Bulbasaur"', async () => {
+test('Tenta buscar pelo "Bulbasaur"', () => {
   const { getByTestId } = render(<App />);
   const queryInput = getByTestId('query-input');
   const searchButton = getByTestId('search-button');
   userEvent.type(queryInput, 'bulbasaur');
   userEvent.click(searchButton);
+  // setTimeout usado para 'mockar' de forma simples a assincronissidade
+  setTimeout(() => {
+    console.log('Checking Bulbasaur after 10 seconds')
+    expect(screen.getByTestId('bulbasaur')).toBeInTheDocument();
+  }, 10000);
+});
+
+test('Tenta mudar a região da Pokédex', async () => {
+  render(<App />);
+  expect(screen.getByTestId('region-select')).toBeInTheDocument();
+  expect(screen.getAllByRole('option').length).toBe(9);
+  userEvent.selectOptions(
+    screen.getByTestId('region-select'),
+    screen.getByTestId('Hoenn'),
+  )
+  // setTimeout usado para 'mockar' de forma simples a assincronissidade
+  setTimeout(() => {
+    console.log('Checking Treecko after 10 seconds')
+    expect(screen.getByTestId('treecko')).toBeInTheDocument();
+  }, 10000);
 });

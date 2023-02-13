@@ -20,11 +20,11 @@ const Pokemon = ({ pokemon }) => {
     <>
       {loading && 
         <Link to={`/pokemon/${pokeId[6]}`}>
-          <div className={`Pokemon ${pokeInfo.types[0].type.name}`}>
+          <div data-testid={pokemon.name} className={`Pokemon ${pokeInfo.types[0].type.name}`}>
             <h3 className='capitalize'>{pokemon.name}</h3>
             <h6>{`#${pokeId[6]}`}</h6>
             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeId[6]}.png`} alt={pokemon.name} />
-            <h4 className={`capitalize type-${pokeInfo.types[0].type.name}`}>{pokeInfo.types.map(t => t.type.name).join(' / ')}</h4>
+            <h4 className={`capitalize`}>{pokeInfo.types.map(t => t.type.name).join(' / ')}</h4>
           </div>
         </Link>
       }

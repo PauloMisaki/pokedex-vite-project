@@ -1,0 +1,291 @@
+#root {
+  max-width: 100%!important;
+  width: 100%!important;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.type-grass {
+  color: white;
+  background-color: rgb(99	188	90);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-grass {
+  background: rgb(99	188	90);
+}
+
+.type-water {
+  color: white;
+  background-color: rgb(79	145	215);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-water {
+  background: rgb(79	145	215);
+}
+ 
+.type-fire {
+  color: white;
+  background-color: rgb(241	157	82);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-fire {
+  background: rgb(241	157	82);
+}
+ 
+.type-bug {
+  color: white;
+  background-color: rgb(146 195 59);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-bug {
+  background: rgb(146 195 59);
+}
+ 
+.type-poison {
+  color: white;
+  background-color: rgb(172	107	202);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-poison {
+  background: rgb(172	107	202);
+}
+ 
+.type-flying {
+  color: white;
+  background-color: rgb(145,171,223);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-flying {
+  background: rgb(145,171,223);
+}
+ 
+.type-electric {
+  color: white;
+  background-color: rgb(245	212	71);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-electric {
+  background: rgb(245	212	71);
+}
+ 
+.type-fighting {
+  color: white;
+  background-color: rgb(207 63 107);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-fighting {
+  background: rgb(207 63 107);
+}
+ 
+.type-ground {
+  color: white;
+  background-color: rgb(218	121	67);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-ground {
+  background: rgb(218	121	67);
+}
+ 
+.type-rock {
+  color: white;
+  background-color: rgb(198	184	141);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-rock {
+  background: rgb(198	184	141);
+}
+ 
+.type-normal {
+  color: white;
+  background-color: rgb(148	155	163);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-normal {
+  background: rgb(148	155	163);
+}
+ 
+.type-ice {
+  color: white;
+  background-color: rgb(115 207 193);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-ice {
+  background: rgb(115 207 193);
+}
+ 
+.type-psychic {
+  color: white;
+  background-color: rgb(237 112 121);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-psychic {
+  background: rgb(237 112 121);
+}
+ 
+.type-ghost {
+  color: white;
+  background-color: rgb(81	105	174);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-ghost {
+  background: rgb(81	105	174);
+}
+ 
+.type-dark {
+  color: white;
+  background-color: rgb(89 83 101);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-dark {
+  background: rgb(89 83 101);
+}
+ 
+.type-steel {
+  color: white;
+  background-color: rgb(102 142 161);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-steel {
+  background: rgb(102 142 161);
+}
+ 
+.type-dragon {
+  color: white;
+  background-color: rgb(47 110 196);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-dragon {
+  background: rgb(47 110 196);
+}
+ 
+.type-fairy {
+  color: white;
+  background-color: rgb(236 144 231);
+  width: 100px;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bg-fairy {
+  background: rgb(236 144 231);
+}
+
+.misc-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 60px;
+}
+
+.ordered-info {
+  gap: 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
